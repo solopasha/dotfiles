@@ -4,8 +4,6 @@
 # cat molot-tora.mp4 eraz.zip > data.mp4
 # unzip date.mp4
 
-# git.io custom url
-# curl -i https://git.io -F "url=https://github.com/creio" -F "code=YOUR_CUSTOM_NAME"
 
 alias sz="source $HOME/.zshrc"
 alias ez="$EDITOR $HOME/.zshrc"
@@ -120,7 +118,7 @@ alias ...="cd ../.."
 alias q="exit"
 #alias gh="cd /media/files/github"
 #alias gl="cd /media/files/gitlab"
-#alias glc="cd /media/files/gitlab/creio"
+
 
 gc () {
   git clone "$1"
