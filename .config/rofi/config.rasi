@@ -1,0 +1,14 @@
+/** Configured For Applets **/
+
+configuration {
+  show-icons:         true;
+  icon-theme:         "dui-ico";
+  location: 5;
+  yoffset: -50;
+  xoffset: -20;
+  modi: "window,drun,ssh,combi";
+  combi-modi: "window,drun,ssh";
+  terminal: "urxvtc";
+  run-command: "{cmd}";
+  run-shell-command: "{terminal} -name Float -e {cmd}";
+}
