@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# qemu-img create -f qcow2 ctlos.qcow2 14G
+
+# -net nic -net user,hostfwd=tcp::22222-:22 \
+# sudo systemctl start sshd
+# ssh -p 22222 liveuser@localhost
+# -net nic -net user \
+
+QVIRT_DIR=$HOME/.qvirt
+QVIRT_QCOW=arch.qcow2
+QVIRT_SIZE=10G
+
+# create dir & drive
+if [ ! -d $QVIRT_DIR ]; then
+  mkdir -p $QVIRT_DIR
+  qemu-img create -f qcow2 $QVIRT_DIR/$QVIRT_QCOW $QVIRT_SIZE
+fi
+
+if [ "$1" = "-i" ]; then
+  # qvirt -i
+  qemu-system-x86_64 \
+    -enable-kvm \
+    -m 2048M \
+    -net nic -net user,hostfwd=tcp::22222-:22 \
+    -vga qxl \
+    -soundhw ac97 \
+    -hda $QVIRT_DIR/$QVIRT_QCOW \
+    -cdrom $2 \
+    -boot d
+else
+  # qvirt
+  qemu-system-x86_64 \
+    -enable-kvm \
+    -m 2048M \
+    -net nic -net user,hostfwd=tcp::22222-:22 \
+    -vga qxl \
+    -soundhw ac97 \
+    -hda $1
+fi
