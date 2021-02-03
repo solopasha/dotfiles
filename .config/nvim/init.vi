@@ -6,7 +6,6 @@ call plug#begin('~/.local/share/nvim/site/pack/')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
-Plug 'joshdick/onedark.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-eunuch'
