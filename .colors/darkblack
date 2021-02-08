@@ -1,0 +1,36 @@
+
+*.foreground:  #c5c8c6
+*.background:  #0e1011
+*.cursorColor:  #c5c8c6
+! black
+*.color0:      #cccc1f
+*.color8:      #969896
+! red
+*.color1:      #cc342b
+*.color9:      #cccc1f
+! green
+*.color2:      #198844
+*.color10:     #198844
+! yellow
+*.color3:      #fba922
+*.color11:     #fba922
+! blue
+*.color4:      #8e9dff
+*.color12:     #8e9dff
+! magenta
+*.color5:      #a36ac7
+*.color13:     #3e3d3c
+! cyan
+*.color6:      #3971ed
+*.color14:     #38746d
+! white
+*.color7:      #c5c8c6
+*.color15:     #ececec
+rofi.font: Fira Mono, Regular, 11
+
+rofi.color-enabled: true
+
+rofi.color-normal: argb:00000000 , #d4d4d4       , argb:00000000 , #d4d4d4 , #000000
+rofi.color-urgent: argb:00000000 , #fba922       , argb:00000000 , #fba922 , #000000
+rofi.color-active: argb:00000000 , #d4d4d4       , argb:00000000 , #454545 , #000000
+rofi.color-window: argb:bb252525 , argb:ff000000 , argb:00000000
