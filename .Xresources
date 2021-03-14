@@ -7,14 +7,10 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 
-
-#include ".colors/test"
-!URxvt.font: -*-rissole-*
+#include ".colors/2dark"
 
 !URxvt.font: xft:Hack Nerd Font Mono:size=9:antialias=true
-URxvt.font: xft:Terminus:style=Bold:size=9,xft:Hack Nerd Font Mono:size=9:antialias=true
-!URxvt*font:	xft:Fira Code:style=Retina:pixelsize=26:antialias=true:hinting=true
-!URxvt*font: xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true
+URxvt.font: xft:Terminus:style=Bold:size=9,xft:Hack Nerd Font Mono:size=9
 
 URxvt*geometry: 120x30
 URxvt.internalBorder: 5
@@ -25,7 +21,7 @@ URxvt.antialias: true
 URxvt.iconFile: /usr/share/icons/Papirus/48x48/apps/urxvt.svg
 
 URxvt.pointerBlank: true
-!URxvt.saveLines:    5000
+URxvt.saveLines:    5000
 URxvt.scrollBar:    false
 URxvt.cursorBlink:  true
 URxvt.urgentOnBell: true
