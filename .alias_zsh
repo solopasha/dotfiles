@@ -1,8 +1,5 @@
 #!/usr/bin/bash
 
-# Стеганография
-# cat molot-tora.mp4 eraz.zip > data.mp4
-# unzip date.mp4
 
 
 alias sz="source $HOME/.zshrc"
@@ -72,15 +69,9 @@ abuild () {
   rm -rf ~/.build/$1
 }
 
-#alias neofetch="neofetch --ascii ~/.config/neofetch/flower"
-alias neo="neofetch --w3m ~/.config/neofetch/cn.jpg"
-# alias neo="neofetch --kitty ~/.config/neofetch/cn.jpg"
-# alias neo="neofetch --w3m"
 
-# Погода, не только по городу, но и по месту. Нет привязки к регистру и языку.
-# alias wtr="curl 'wttr.in/Москва?M&lang=ru'"
-# alias wtr="curl 'wttr.in/Москва?M&lang=ru' | sed -n '1,17p'"
-# alias wtr="curl 'wttr.in/?M1npQ&lang=ru'"
+alias neo="neofetch --w3m ~/.config/neofetch/cn.jpg"
+
 wtr () {
   # curl "wttr.in/?M$1npQ&lang=ru"
   curl "wttr.in/Moscow?M$1npQ&lang=ru"
@@ -120,9 +111,6 @@ alias q="exit"
 #alias gl="cd /media/files/gitlab"
 
 
-gc () {
-  git clone "$1"
-}
 function gcj () {
   git clone "$1"
   cd "$2"
@@ -143,8 +131,7 @@ alias gpl="git pull"
 alias gp="git push"
 alias gpm="git push origin master"
 
-# tor chromium, min
-alias torc="$BROWSER --proxy-server='socks://127.0.0.1:9050' &"
+
 
 # full screen flags -fs
 alias yt="youtube-viewer"
@@ -203,41 +190,17 @@ alias tmd="tmux detach"
 alias tmk="tmux kill-server"
 alias fm="ranger"
 alias sfm="sudo ranger"
-alias sth="sudo thunar ."
-alias th="thunar . &"
 alias na="nautilus . &"
-alias sna="sudo nautilus ."
 alias h="htop"
 alias {v,vi,vim}="nvim"
 
-alias pkglist="pacman -Qneq > ~/.pkglist.txt"
-alias aurlist="pacman -Qmeq > ~/.aurlist.txt"
-
 alias packey="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys && sudo pacman -Syy"
-alias sp="sudo pacman -S"
-alias spU="sudo pacman -U"
-alias sps="sudo pacman -Ss"
-alias spc="sudo pacman -Sc"
-alias spcc="sudo pacman -Scc"
-alias spy="sudo pacman -Syy"
-alias spu="sudo pacman -Syu"
-alias spr="sudo pacman -R"
-alias spo="sudo pacman -S --overwrite='*'"
+
 
 alias y="yay -S"
-alias yn="yay -S --noconfirm"
-alias yl="yay -S --noconfirm - < .aurlist.txt"
 alias ys="yay"
 alias ysn="yay --noconfirm"
-alias yc="yay -Sc"
-alias ycc="yay -Scc"
-alias yy="yay -Syy"
-alias yu="yay -Syu"
-alias yun="yay -Syu --noconfirm"
 alias yr="yay -R"
-alias yrn="yay -R --noconfirm"
-alias yskip="yay --mflags '--nocheck --skippgpcheck --noconfirm'"
-alias ynskip="yay --mflags --skipinteg --noconfirm"
 
 # Python
 alias ve="virtualenv ve"
