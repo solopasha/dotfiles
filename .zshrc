@@ -7,19 +7,17 @@ ZSH=/usr/share/oh-my-zsh/
 #ZSH_THEME="robbyrussell"
 # ZSH_THEME="oxide"
 #ZSH_THEME="ag"
-ZSH_THEME="af-magic"
+ZSH_THEME="spaceship"
 #ZSH_THEME="sorin"
 DISABLE_AUTO_UPDATE="true"
-plugins=(
-)
+plugins=(git docker docker-compose colored-man-pages command-not-found zsh-autosuggestions zsh-syntax-highlighting)
 export PATH=$HOME/.bin:$HOME/.bin/popup:$HOME/.local/bin:/usr/local/bin:$PATH
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 [[ ! -d $ZSH_CACHE_DIR ]] && mkdir $ZSH_CACHE_DIR
 source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white"
-
+autoload -U compinit && compinit
+autoload -U bashcompinit && bashcompinit
 # fzf & fd
 [[ -e "/usr/share/fzf/fzf-extras.zsh" ]] && source /usr/share/fzf/fzf-extras.zsh
 export FZF_DEFAULT_COMMAND="fd --type file --color=always --follow --hidden --exclude .git"
@@ -30,10 +28,12 @@ export FZF_COMPLETION_TRIGGER="~~"
 
 # export TERM="xterm-kitty"
 # export TERM="rxvt-unicode"
-export TERM=xterm-256color
-export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl'; else echo 'nvim'; fi)"
+#export TERM=xterm-256color
+#export EDITOR="$(if [[ -n $DISPLAY ]]; then echo 'subl'; else echo 'nvim'; fi)"
 export BROWSER="firefox"
 #export SSH_KEY_PATH="~/.ssh/dsa_id"
+export VISUAL="nvim"
+export EDITOR="nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 [[ -f ~/.alias_zsh ]] && . ~/.alias_zsh
