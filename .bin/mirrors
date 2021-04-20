@@ -16,4 +16,4 @@ else
   sudo reflector --verbose -a 12 -l 50 -f 15  -p https -p http --sort rate --save /etc/pacman.d/mirrorlist
 fi
 
-sudo pacman -Syy
+sudo pacman -Syu
