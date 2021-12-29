@@ -1,0 +1,40 @@
+[alias]
+	info = "status --short --branch"
+	tags = "tag --list"
+	branches = "branch --all"
+	remotes = "remote -v"
+	uncommit = "reset --soft HEAD~1"
+	reword = "commit --amend"
+	stash-all = "stash save --include-untracked"
+[user]
+	email = pasha@solopasha.ru
+	name = solopasha
+	signingkey = pasha@solopasha.ru
+[apply]
+	whitespace = fix
+[core]
+	editor = code --wait
+	whitespace = trailing-space,space-before-tab
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	pager = true
+	status = auto
+	ui = auto
+[commit]
+	gpgsign = true
+[credential]
+	helper = /mnt/c/Users/pasha/scoop/apps/git/current/mingw64/libexec/git-core/git-credential-manager-core.exe
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[pull]
+	rebase = true
+[push]
+	followTags = true
